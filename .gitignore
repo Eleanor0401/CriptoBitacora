@@ -1,0 +1,23 @@
+# Archivos de compilación Maven
+target/
+*.class
+
+# Archivos de configuración de NetBeans
+build/
+dist/
+nbproject/private/
+.nb-gradle/
+
+# Archivos de IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Archivos de Eclipse
+.project
+.classpath
+.settings/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
