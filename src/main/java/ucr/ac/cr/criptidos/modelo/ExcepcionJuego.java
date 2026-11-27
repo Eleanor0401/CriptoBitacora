@@ -8,6 +8,12 @@ package ucr.ac.cr.criptidos.modelo;
  * @author Darrell
  */
 
+/**
+ * Clase ExcepcionJuego que representa un componente del sistema de criptidos.
+ */
 public class ExcepcionJuego extends Exception {
+    /**
+     * Constructor de la clase.
+     */
     public ExcepcionJuego(String msg) { super(msg); }
 }

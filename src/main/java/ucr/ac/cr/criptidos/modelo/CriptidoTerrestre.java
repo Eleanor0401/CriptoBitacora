@@ -10,7 +10,13 @@ package ucr.ac.cr.criptidos.modelo;
 
 import javax.swing.ImageIcon;
 
+/**
+ * Clase CriptidoTerrestre que representa un componente del sistema de criptidos.
+ */
 public class CriptidoTerrestre extends Criptido {
+    /**
+     * Constructor de la clase.
+     */
     public CriptidoTerrestre(String nombre, String infoLibro, String[] arregloPistas, ImageIcon imagenCriptido) { super(nombre, infoLibro, arregloPistas, imagenCriptido); }
     @Override public String mensajeAparicion() { return "Se escuchan pasos pesados y ramas rompiendose en la tierra..."; }
     @Override public int getPuntos() { return 50; }

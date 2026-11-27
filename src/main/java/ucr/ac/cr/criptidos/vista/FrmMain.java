@@ -10,13 +10,27 @@ package ucr.ac.cr.criptidos.vista;
 
 import java.awt.event.ActionListener;
 
+/**
+ * Clase FrmMain que representa un componente del sistema de criptidos.
+ */
 public class FrmMain extends javax.swing.JFrame {
 
+    /**
+     * Constructor de la clase.
+     */
     public FrmMain() {
         initComponents();
         setSize(416, 439);
         setLocationRelativeTo(null);
     }
+    
+    /**
+
+    
+     * Metodo funcional de la clase.
+
+    
+     */
     
     public void setControlador(ActionListener controlador) {
         btnNivel1.addActionListener(controlador); 
@@ -25,6 +39,14 @@ public class FrmMain extends javax.swing.JFrame {
         btnNivel4.addActionListener(controlador); 
         btnSalir.addActionListener(controlador);
     }
+    
+    /**
+
+    
+     * Metodo funcional de la clase.
+
+    
+     */
     
     public void actualizarDatos(int puntos, boolean n1, boolean n2, boolean n3, boolean n4) {
         lblPuntos.setText("Puntos: " + puntos); 

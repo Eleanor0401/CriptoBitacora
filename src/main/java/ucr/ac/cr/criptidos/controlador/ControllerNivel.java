@@ -23,6 +23,9 @@ import javax.swing.Timer;
 import ucr.ac.cr.criptidos.modelo.*;
 import ucr.ac.cr.criptidos.vista.FrmNivel;
 
+/**
+ * Clase ControllerNivel que representa un componente del sistema de criptidos.
+ */
 public class ControllerNivel implements ActionListener, KeyListener {
     
     private FrmNivel frmNivel;
@@ -38,6 +41,9 @@ public class ControllerNivel implements ActionListener, KeyListener {
     private ImageIcon iconOculto; 
     private ImageIcon iconExplorado;
 
+    /**
+     * Constructor de la clase.
+     */
     public ControllerNivel(int idNivel, RegistroJuego registro, ControllerMain controllerMain) {
         this.registro = registro;
         this.controllerMain = controllerMain;
@@ -171,6 +177,11 @@ public class ControllerNivel implements ActionListener, KeyListener {
     }
 
     @Override
+    /**
+
+     * Metodo funcional de la clase.
+
+     */
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("btnAtras")) {
             frmNivel.dispose();
@@ -208,6 +219,11 @@ public class ControllerNivel implements ActionListener, KeyListener {
                 
                 Timer t = new Timer(100, new ActionListener() {
                     @Override
+                    /**
+
+                     * Metodo funcional de la clase.
+
+                     */
                     public void actionPerformed(ActionEvent evt) {
                         procesarResultadoConsola(resultadoFinal);
                         frmNivel.getPanelBotones().setInvestigarEnabled(true);
@@ -300,6 +316,11 @@ public class ControllerNivel implements ActionListener, KeyListener {
     }
 
     @Override
+    /**
+
+     * Metodo funcional de la clase.
+
+     */
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_UP) mapa.mover(0, -1);
         else if (e.getKeyCode() == KeyEvent.VK_DOWN) mapa.mover(0, 1);

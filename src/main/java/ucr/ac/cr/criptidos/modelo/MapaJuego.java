@@ -8,10 +8,16 @@ package ucr.ac.cr.criptidos.modelo;
  * @author Darrell
  */
 
+/**
+ * Clase MapaJuego que representa un componente del sistema de criptidos.
+ */
 public class MapaJuego {
     private String[][] matrizMapa;
     private String[][] matrizEstado;
     private int posX, posY, tamano;
+    /**
+     * Constructor de la clase.
+     */
     public MapaJuego(int tamano, int nivelActual) {
         this.tamano = tamano; matrizMapa = new String[tamano][tamano]; matrizEstado = new String[tamano][tamano];
         posX = 0; posY = 0; cargarMapa(nivelActual);
@@ -39,10 +45,20 @@ public class MapaJuego {
             matrizMapa[0][3] = "Pregunta1"; matrizMapa[3][1] = "Pregunta2"; matrizMapa[5][5] = "Pregunta3"; matrizMapa[2][2] = "Criptido";
         }
     }
+    /**
+
+     * Metodo funcional de la clase.
+
+     */
     public void mover(int movX, int movY) {
         int xTemp = posX + movX; int yTemp = posY + movY;
         if (xTemp >= 0 && xTemp < tamano && yTemp >= 0 && yTemp < tamano) { posX = xTemp; posY = yTemp; }
     }
+    /**
+
+     * Metodo funcional de la clase.
+
+     */
     public String explorarCasilla(boolean sePuedeGanar) throws ExcepcionJuego {
         if (matrizEstado[posY][posX].equals("Explorado")) return "YaExplorado";
         String eventoEncontrado = matrizMapa[posY][posX];
@@ -52,8 +68,28 @@ public class MapaJuego {
         matrizEstado[posY][posX] = "Explorado";
         return eventoEncontrado;
     }
+    /**
+
+     * Metodo funcional de la clase.
+
+     */
     public boolean verificarExplorado(int f, int c) { return matrizEstado[f][c].equals("Explorado"); }
+    /**
+
+     * Metodo funcional de la clase.
+
+     */
     public int getPosX() { return posX; }
+    /**
+
+     * Metodo funcional de la clase.
+
+     */
     public int getPosY() { return posY; }
+    /**
+
+     * Metodo funcional de la clase.
+
+     */
     public int getTamano() { return tamano; }
 }

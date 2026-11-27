@@ -14,11 +14,17 @@ import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyListener;
 
+/**
+ * Clase FrmNivel que representa un componente del sistema de criptidos.
+ */
 public class FrmNivel extends javax.swing.JFrame {
 
     private PanelBotones panelBotones;
     private JLabel[][] matrizGrafica;
     
+    /**
+     * Constructor de la clase.
+     */
     public FrmNivel(int tamano) {
         initComponents();
         setSize(780, 710);
@@ -46,15 +52,51 @@ public class FrmNivel extends javax.swing.JFrame {
         panelBotones.setFocusable(true);
     }
     
+    /**
+
+    
+     * Metodo funcional de la clase.
+
+    
+     */
+    
     public void setControlador(ActionListener ctrlBotones, KeyListener ctrlTeclas) {
         panelBotones.setControlador(ctrlBotones, ctrlTeclas);
         this.addKeyListener(ctrlTeclas);
     }
     
+    /**
+
+    
+     * Metodo funcional de la clase.
+
+    
+     */
+    
     public void addTextoConsola(String txt) { txtConsola.append(txt + "\n"); }
+    /**
+
+     * Metodo funcional de la clase.
+
+     */
     public void addSeparadorConsola() { txtConsola.append("-----------------------------\n"); }
+    /**
+
+     * Metodo funcional de la clase.
+
+     */
     public void setTextoConsola(String txt) { txtConsola.setText(txt + "\n"); }
+    /**
+
+     * Metodo funcional de la clase.
+
+     */
     public PanelBotones getPanelBotones() { return panelBotones; }
+    /**
+
+     * Metodo funcional de la clase.
+
+     */
     public JLabel[][] getMatrizGrafica() { return matrizGrafica; }
     
     /**

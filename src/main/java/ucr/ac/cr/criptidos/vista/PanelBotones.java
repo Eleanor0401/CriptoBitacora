@@ -11,11 +11,25 @@ package ucr.ac.cr.criptidos.vista;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyListener;
 
+/**
+ * Clase PanelBotones que representa un componente del sistema de criptidos.
+ */
 public class PanelBotones extends javax.swing.JPanel {
 
+    /**
+     * Constructor de la clase.
+     */
     public PanelBotones() {
         initComponents();
     }
+    
+    /**
+
+    
+     * Metodo funcional de la clase.
+
+    
+     */
     
     public void setControlador(ActionListener controlBotones, KeyListener controlTeclas) {
         btnAtras.addActionListener(controlBotones); 
@@ -27,11 +41,27 @@ public class PanelBotones extends javax.swing.JPanel {
         btnLibro.setFocusable(false);
     }
     
+    /**
+
+    
+     * Metodo funcional de la clase.
+
+    
+     */
+    
     public void setStats(String pts, String aciertos, String progreso) {
         lblPuntos.setText("Puntos: " + pts); 
         lblAciertos.setText("Aciertos: " + aciertos); 
         lblProgreso.setText(progreso);
     }
+    
+    /**
+
+    
+     * Metodo funcional de la clase.
+
+    
+     */
     
     public void setInvestigarEnabled(boolean b) { 
         btnInvestigar.setEnabled(b); 

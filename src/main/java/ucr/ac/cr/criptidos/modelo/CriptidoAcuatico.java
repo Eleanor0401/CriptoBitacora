@@ -9,7 +9,13 @@ package ucr.ac.cr.criptidos.modelo;
  */
 import javax.swing.ImageIcon;
 
+/**
+ * Clase CriptidoAcuatico que representa un componente del sistema de criptidos.
+ */
 public class CriptidoAcuatico extends Criptido {
+    /**
+     * Constructor de la clase.
+     */
     public CriptidoAcuatico(String nombre, String infoLibro, String[] arregloPistas, ImageIcon imagenCriptido) { super(nombre, infoLibro, arregloPistas, imagenCriptido); }
     @Override public String mensajeAparicion() { return "El agua burbujea de forma violenta y una silueta enorme sale a la superficie..."; }
     @Override public int getPuntos() { return 50; }
